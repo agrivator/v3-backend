@@ -1,8 +1,8 @@
 # models here - db diagram : https://dbdiagram.io/d/6304c4b5f1a9b01b0fc7dc8a
 
 from sqlalchemy import Column, String, DateTime, Integer, Boolean
+from .database import  Base
 
-from app.server.database import Base
 
 
 # user class
