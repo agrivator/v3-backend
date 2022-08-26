@@ -10,11 +10,10 @@ load_dotenv('../../.env')
 username = os.getenv('DATABASE_USER_NAME')
 password = os.environ.get('DATABASE_PASSWORD')
 database = os.environ.get('DATABASE')
-print(username)
 
 # database url
-# DATABASE_URL = f"postgresql://{username}:{password}@localhost/{database}"
-DATABASE_URL = f"postgresql://postgres:admin@localhost/productionDB"
+
+DATABASE_URL = f"postgresql://{username}:{password}@localhost/{database}"
 
 # database engine
 engine = create_engine(DATABASE_URL)
