@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from dotenv import load_dotenv
 import os
 
-load_dotenv('../../.env')
+load_dotenv('../.env')
 
 username = os.getenv('DATABASE_USER_NAME')
 password = os.environ.get('DATABASE_PASSWORD')
@@ -14,6 +14,7 @@ database = os.environ.get('DATABASE')
 # database url
 
 DATABASE_URL = f"postgresql://{username}:{password}@localhost/{database}"
+print("database",username,password, database, DATABASE_URL)
 
 # database engine
 engine = create_engine(DATABASE_URL)
