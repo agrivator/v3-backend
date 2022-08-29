@@ -6,7 +6,7 @@
 - Install the requirements
    
         pip install -r requirments.txt
-- create .env file with credential specified in .env.sample file
+- create .env file in app directory with credential specified in .env.sample file
 - Go to app directory 
 - Run the command to start the server
 
