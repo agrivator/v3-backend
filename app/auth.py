@@ -1,6 +1,6 @@
 # authentication routes
 import sys
-sys.path.append("..")
+sys.path.append("/")
 
 from datetime import datetime
 from typing import Optional
@@ -65,11 +65,6 @@ def create_access_token(username:str, user_id:int):
 
     return jwt.encode(encode,secret_key,algorithm=algorithm)
 
-# read all users
-@route.get("/read")
-async def read_all_users(db: Session= Depends(get_db)):
-    result = db.query(models.User).all()
-    return result
 
 # create user
 @route.post("/create/user")
