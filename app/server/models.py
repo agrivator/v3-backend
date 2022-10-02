@@ -11,8 +11,8 @@ class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True, index=True)
     role_id = Column(Integer, ForeignKey('rolePermissions.role_id'))
-    first_name = Column(String)
-    last_name = Column(String)
+    name = Column(String)
+    username = Column(String,unique=True)
     email = Column(String, unique=True, index=True)
     mobile = Column(String, unique=True, index=True)
     hashed_password = Column(String)
