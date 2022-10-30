@@ -14,7 +14,6 @@ database = os.environ.get('DATABASE')
 # database url
 
 DATABASE_URL = f"postgresql://{username}:{password}@localhost/{database}"
-print("database",username,password, database, DATABASE_URL)
 
 # database engine
 engine = create_engine(DATABASE_URL)
